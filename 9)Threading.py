@@ -71,3 +71,123 @@ t3.start()
 t1.join()
 t2.join()
 t3.join()
+
+
+
+# 56)Is oveloading is supported in python
+# Python does not support Method Overloading directly like C++ or Java.
+# In Python, if multiple methods with the same name are defined in a class, the last definition overrides the previous ones.
+
+
+class addition:
+    def add(self,a):
+       print("Addition of 1 number:",a)
+
+    def add(self,a,b):
+       print("Addition of 2 numbers:",a+b)
+
+d = addition()
+d.add(10,20)  # This will call the second add method
+# output: Addition of 2 numbers: 30
+
+
+
+# 58)what is and Is python support overriding
+# Method Overriding occurs when a child class provides its own implementation of a method that is already defined in the parent class.
+# The method in the child class overrides the method of the parent class.
+# Yes, Python Supports Method Overriding ✅
+
+class Parent:
+    def show(self):
+        print("Parent Class Method")
+
+class Child(Parent):
+    def show(self):
+        print("Child Class Method")
+
+c = Child()
+c.show()
+
+
+
+# 59)what is Inheritance
+# Inheritance is a fundamental concept in object-oriented programming (OOP) that allows a class (called the child or subclass) to inherit properties and behaviors (methods) from another class (called the parent or superclass). This promotes code reusability and establishes a hierarchical relationship between classes.
+# Parent Class (Base Class) → Class whose properties are inherited.
+# Child Class (Derived Class) → Class that inherits from the parent class.
+
+class Person:
+    def display(self):
+        print("I am a Person")
+
+class Student(Person):
+    def study(self):
+        print("I am Studying")
+
+s = Student()
+
+s.display()
+s.study()
+
+
+
+# 60)what is type of Inheritance
+class A:
+    def show(self):
+        print("Class A")
+
+class B(A):
+    pass
+
+obj = B()
+obj.show()
+
+
+
+class A:
+    def showA(self):
+        print("Class A")
+
+class B:
+    def showB(self):
+        print("Class B")
+
+class C(A, B):
+    pass
+
+obj = C()
+obj.showA()
+obj.showB()
+
+
+# 3. Multilevel Inheritance
+class A:
+    def showA(self):
+        print("Class A")
+
+class B(A):
+    pass
+
+class C(B):
+    pass
+
+obj = C()
+obj.showA()
+
+
+
+# 4. Hierarchical Inheritance
+class A:
+    def show(self):
+        print("Class A")
+
+class B(A):
+    pass
+
+class C(A):
+    pass
+
+b = B()
+c = C()
+
+b.show()
+c.show()
